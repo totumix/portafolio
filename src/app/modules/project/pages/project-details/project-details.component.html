@@ -1,5 +1,5 @@
 <div class="row justify-content-center">
-    <div *ngIf="post" class="col-lg-6 col-md-12 col-sm-12 col-xs-12 mg-y-10 font-20">
+    <div *ngIf="post" class="col-lg-7 col-md-12 col-sm-12 col-xs-12 mg-y-10 font-20">
         <h1>{{post.title}}</h1>
         <div class="mg-y-20">
             <span>{{post.brief}}</span>
@@ -24,7 +24,7 @@
                 <p class="font-12 mg-y-5">Code technologies I got involved with while working on this project</p>
             </div>
             <div class="mg-y-10">
-                <ul style="padding-left: 20px;">
+                <ul class="pdd-left-20">
                     <li class="mg-y-10" *ngFor="let tag of post.tags">{{tag}}</li>
                 </ul>
             </div>

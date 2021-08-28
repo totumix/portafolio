@@ -31,6 +31,12 @@ $size50: 3.125rem;
   }
 }
 
+.align-contet-items-center{
+  display:flex; 
+  align-content: center;
+  align-items:center
+}
+
 .color{
   &-orange {
     color: orange;
@@ -40,6 +46,9 @@ $size50: 3.125rem;
   }
   &-light-gray {
     color: #ccc;
+  }
+  &-green-ovni{
+    color: #81C163;
   }
 }
 

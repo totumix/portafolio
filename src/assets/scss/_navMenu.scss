@@ -156,23 +156,22 @@
 .menu{
   a{
         text-decoration:none;
-        color:inherit;
         font-size:14px;
    } 
    li{
         display:inline-block;
-        padding:5px 10px;
+        padding:5px 0;
         background-color:white;
-        border-bottom:1px solid #ccc;
         text-align:center;
-        color:black;
+        font-weight: bold;
+        width: 110px;
     }
     li:hover{
         background-color:#fff;
-        color:#000;
+        color:#81C163;
     }
 }
 
 .active{
-  font-weight: bold;
+  color:#81C163;
 }

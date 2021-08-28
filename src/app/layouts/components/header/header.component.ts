@@ -7,9 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  public navegation: string = "ABOUTME";
+  public menuOptions = [];
+  constructor() {
+    this.menuOptions = [
+      { label: "ABOUTME", url: "/landing-page/home", hide: false },
+      { label: "SKILLS", url: "/landing-page/skill", hide: false },
+      { label: "EXPERIENCE", url: "/landing-page/work-experience", hide: false },
+      { label: "PROJECTS", url: "/landing-page/projects", hide: true },
+      { label: "CONTACT", url: "/landing-page/contact", hide: false },
+    ]
+  }
 
   ngOnInit(): void {
   }
 
+  onChange() { }
+
+  selectNavegation(string: string) {
+    this.navegation = string;
+  }
 }

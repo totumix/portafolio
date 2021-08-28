@@ -14,7 +14,6 @@ export class PostsService {
   ) {
     this.url = `${environment.serverUrl}`;
     this.options = { headers: contentHeaders }
-    console.log(this.url)
   }
 
   getPosts(): Observable<any> {

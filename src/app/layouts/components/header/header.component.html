@@ -1,4 +1,37 @@
-<header class="container-fluid">
-    <span class="font-18 u-bold d-block">Web developer</span>
-    <span class="font-14">Fullstack and UI/UX Design</span>
+<header class="container-fluid pdd-y-25">
+    <div class="row justify-content-center">
+        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="align-contet-items-center">
+                        <span class=" mg-right-20 font-18 u-bold d-block">totumix.com</span>
+                        <img src="assets/img/logo.svg" width="35px" height="35px" />
+                    </div>
+                    <span class="font-18 u-bold d-block">Web developer</span>
+                    <span class="font-14">Fullstack and UI/UX Design</span>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="justify-content-center menu hide-down--lg mg-bottom-35">
+                        <ul *ngFor="let option of menuOptions">
+                            <li>
+                                <a routerLinkActive="active" [routerLink]="[option.url]"
+                                    (click)="selectNavegation(option.label)">{{option.label}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <nav class="btn-pluss-wrapper hide-up--lg">
+                        <h2 class="tooltip">Menu!</h2>
+                        <div class="btn-pluss">
+                            <ul>
+                                <li *ngFor=" let option of menuOptions">
+                                    <a routerLinkActive="active" [routerLink]="[option.url]"
+                                        (click)="selectNavegation(option.label)">{{option.label}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
 </header>
