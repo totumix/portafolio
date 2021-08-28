@@ -1,0 +1,37 @@
+header{
+    border-bottom: 1px solid #ccc; 
+    padding: 15px 0 15px 30px;
+}
+
+footer{
+    border-top: 1px solid #ccc;
+    z-index: 10;
+    height: 50px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    bottom: 0; 
+    right: 0;
+    left: 0;
+    background-color: white; 
+    span{
+        font-size: 18px;
+    }
+    .img-container{
+        position: absolute; 
+        right: 0; 
+        padding-right: 2rem;
+        img{
+            width: 25px;
+            height: 25px;
+            float: right;
+            margin: 0 5px;
+        }
+    }
+}
+
+.profile-img{
+    border-radius: 50%; 
+    width: 150px;
+     height: 150px; 
+}

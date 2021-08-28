@@ -1,0 +1,10 @@
+<div class="skills-grid">
+    <div *ngFor="let skill of skills">
+        <span>{{skill.label}}</span>
+        <div class="justify-content-center">
+            <div class="skills-grid__starts" *ngFor="let checked of skill.points">
+                <div [ngClass]="{'color-orange' : checked , 'color-gray' : !checked}" for="checked">★</div>
+            </div>
+        </div>
+    </div>
+</div>

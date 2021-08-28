@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div *ngIf="post" class="col-lg-6 col-md-12 col-sm-12 col-xs-12 mg-y-10 font-20">
+        <h1>{{post.title}}</h1>
+        <div class="mg-y-20">
+            <span>{{post.brief}}</span>
+            <div class="mg-top-15">
+                <button class="btn">
+                    <span class="mg-x-5">Visitar sitio web</span>
+                </button>
+            </div>
+        </div>
+        <div class="mg-y-15" style="border: 1px solid #ccc; ">
+            <app-slider [items]="carouselData"></app-slider>
+        </div>
+        <div>
+            <div style="border-bottom: 1px solid; padding: 5px 0; ">
+                <span class="u-bold">ABOUT THIS PROJECT</span>
+            </div>
+            <p class="mg-y-10" style="line-height: 1.65em;">{{post.description}}</p>
+        </div>
+        <div>
+            <div style="border-bottom: 1px solid; padding: 5px 0;">
+                <span class="u-bold">TECHNICAL SHEET</span>
+                <p class="font-12 mg-y-5">Code technologies I got involved with while working on this project</p>
+            </div>
+            <div class="mg-y-10">
+                <ul style="padding-left: 20px;">
+                    <li class="mg-y-10" *ngFor="let tag of post.tags">{{tag}}</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <div style="border-bottom: 1px solid; padding: 5px 0;">
+                <span class="u-bold">Resources</span>
+            </div>
+            <p>Code technologies I got involved with while working on this project</p>
+        </div>
+    </div>
+</div>

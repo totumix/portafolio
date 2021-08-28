@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@import "assets/scss/var-mixins",
+"assets/scss/general",
+"assets/scss/layout",
+"assets/scss/projectCard",
+"assets/scss/navMenu",
+"assets/scss/skills",
+"assets/scss/workExperience",
+"assets/scss/contactForm";
+
+@font-face {
+    font-family: roboto-regular;
+    src: url(assets/fonts/Roboto/Roboto-Regular.ttf);
+}
+
+*{
+    margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+    font-family: roboto-regular;
+}

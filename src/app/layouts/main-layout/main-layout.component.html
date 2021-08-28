@@ -1,0 +1,45 @@
+<app-header></app-header>
+<div class="container-fluid pdd-bottom-60">
+    <div class="row">
+        <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+            <div class="justify-content-center">
+                <div class="col-lg-12 pdd-25">
+                    <div class="text-align-center">
+                        <img class="profile-img mg-y-20" src="assets/img/perfil.jpg" />
+                        <div class="font-24">
+                            <span>Sebastian Chavez </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="justify-content-center menu hide-down--lg mg-bottom-35">
+                <ul *ngFor="let option of menuOptions">
+                    <li *ngIf="!option.hide">
+                        <a routerLinkActive="active" [routerLink]="[option.url]"
+                            (click)="selectNavegation(option.label)">{{option.label}}</a>
+                    </li>
+                </ul>
+            </div>
+            <nav class="btn-pluss-wrapper hide-up--lg">
+                <h2 class="tooltip">Menu!</h2>
+                <div class="btn-pluss">
+                    <ul>
+                        <li *ngFor=" let option of menuOptions">
+                            <a routerLinkActive="active" [routerLink]="[option.url]"
+                                (click)="selectNavegation(option.label)">{{option.label}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div>
+                <div class="w-100">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-7  col-md-12 col-sm-12 col-xs-12 hide-down--lg">
+            <app-projects></app-projects>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

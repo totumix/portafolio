@@ -1,0 +1,254 @@
+//FONT SIZE
+$size12: 0.750rem;
+$size14: 0.875rem;
+$size16: 1rem;
+$size18: 1.125rem;
+$size20: 1.25rem;
+$size24: 1.5rem;
+$size25: 1.5625rem;
+$size30: 1.875rem;
+$size40: 2.5rem;
+$size50: 3.125rem;
+
+.font{
+  &-12{
+    font-size: $size12;
+  }
+  &-14{
+    font-size: $size14;
+  }
+  &-16{
+    font-size: $size16;
+  }
+  &-18{
+    font-size: $size18;
+  }
+  &-20{
+    font-size: $size20;
+  }
+  &-24{
+    font-size: $size24;
+  }
+}
+
+.color{
+  &-orange {
+    color: orange;
+  }
+  &-gray {
+    color: #ccc;
+  }
+  &-light-gray {
+    color: #ccc;
+  }
+}
+
+.float{
+  &-r{
+    float: right;
+  }
+}
+
+//TEXT
+.text-align {
+    &-center {
+      text-align: center;
+    }
+    &-left {
+      text-align: left;
+    }
+    &-right {
+      text-align: right;
+    }
+  }
+//UTILITIES TEXT
+.u-uppercase {
+  text-transform: uppercase;
+ }
+  
+.u-underline {
+  text-decoration: underline;
+ }
+  
+.u-regular {
+  font-weight: 400;
+}
+  
+.u-medium {
+  font-weight: 500;
+}
+  
+.u-bold {
+ font-weight: bold;
+}
+
+.u-pointer{
+  cursor: pointer;
+}
+
+.justify-content-center{
+  display: flex;
+  justify-content: center;
+ }
+
+ .d-block{
+   display: block;
+ }
+ 
+ .w-100{
+   width: 100%;
+ }
+//MARGIN
+@for $i from 0 through 10 {
+    .mg-#{ $i * 5} {
+      margin: $i * 5px;
+    }
+  }
+  
+  @for $i from 0 through 30 {
+    .mg-top-#{ $i * 5} {
+      margin-top: $i * 5px;
+    }
+  }
+  
+  @for $i from 0 through 10 {
+    .mg-bottom-#{ $i * 5} {
+      margin-bottom: $i * 5px;
+    }
+  }
+  
+  @for $i from 0 through 10 {
+    .mg-right-#{ $i * 5} {
+      margin-right: $i * 5px;
+    }
+  }
+  
+  @for $i from 0 through 10 {
+    .mg-left-#{ $i * 5} {
+      margin-left: $i * 5px;
+    }
+  }
+  
+  @for $i from 0 through 10 {
+    .mg-x-#{ $i * 5} {
+      margin-right: $i * 5px;
+      margin-left: $i * 5px;
+    }
+  }
+  
+  @for $i from 0 through 30 {
+    .mg-y-#{ $i * 5} {
+      margin-top: $i * 5px;
+      margin-bottom: $i * 5px;
+    }
+  }
+  
+  //PADDING
+  @for $i from 0 through 10 {
+    .pdd-#{ $i * 5} {
+      padding: $i * 5px !important;
+    }
+  }
+  
+  @for $i from 0 through 50 {
+    .pdd-top-#{ $i * 5} {
+      padding-top: $i * 5px;
+    }
+  }
+  
+  @for $i from 0 through 100 {
+    .pdd-bottom-#{ $i * 5} {
+      padding-bottom: $i * 5px;
+    }
+  }
+  
+  @for $i from 0 through 10 {
+    .pdd-right-#{ $i * 5} {
+      padding-right: $i * 5px;
+    }
+  }
+  
+  @for $i from 0 through 100 {
+    .pdd-left-#{ $i * 5} {
+      padding-left: $i * 5px;
+    }
+  }
+  
+  @for $i from 0 through 100 {
+    .pdd-x-#{ $i * 5} {
+      padding-right: $i * 5px !important;
+      padding-left: $i * 5px !important;
+    }
+  }
+  
+  @for $i from 0 through 10 {
+    .pdd-y-#{ $i * 5} {
+      padding-top: $i * 5px;
+      padding-bottom: $i * 5px;
+    }
+  }
+
+  //HIDE
+.hide {
+  display: none;
+  //Max
+  @include mq-max(xs-large) {
+    &-down--lg {
+      display: none;
+    }
+  }
+  @include mq-max(large) {
+    &-down--md {
+      display: none;
+    }
+  }
+  @include mq-max(medium) {
+    &-down--sm {
+      display: none;
+    }
+  }
+  @include mq-max(small) {
+    &-down--xs {
+      display: none;
+    }
+  }
+  @include mq-max(xs-small) {
+    &-down {
+      display: none;
+    }
+  }
+  @include mq-min(xs-small) {
+    &-up {
+      display: none;
+    }
+  }
+  @include mq-min(small) {
+    &-up--xs {
+      display: none;
+    }
+  }
+  @include mq-min(medium) {
+    &-up--sm {
+      display: none;
+    }
+  }
+  @include mq-min(large) {
+    &-up--md {
+      display: none;
+    }
+  }
+  @include mq-min(xs-large) {
+    &-up--lg {
+      display: none;
+    }
+  }
+}
+
+.btn{
+  padding: 10px; 
+  background-color: #007ecf; 
+  color: white;  
+  border-radius: 5px; 
+  cursor: pointer; 
+  border: 1px solid white;
+}
