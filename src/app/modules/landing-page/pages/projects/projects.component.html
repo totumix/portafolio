@@ -1,10 +1,1 @@
-<div class="grid-cards">
-    <div class="card justify-content-center u-pointer" *ngFor="let post of post">
-        <img [src]="'assets/img/' + post.images[0] " alt="">
-        <div class="info u-pointer justify-content-center">
-            <button [routerLink]="['/project/project-details' , post._id]">
-                Read more
-            </button>
-        </div>
-    </div>
-</div>
+<router-outlet></router-outlet>

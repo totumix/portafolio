@@ -3,30 +3,35 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from './app.component';
 import { MainLayoutModule } from './layouts/main-layout/main-layout.module';
-import { ProjectLayoutModule } from './layouts/project-layout/project-layout.module';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
-import { ProjectLayoutComponent } from './layouts/project-layout/project-layout.component';
 import { LandingPageModule } from './modules/landing-page/landing-page.module';
 import { HeaderComponent } from './layouts/components/header/header.component';
 import { FooterComponent } from './layouts/components/footer/footer.component';
 import { PostsService } from './configs/posts.service';
 import { HttpClientModule } from '@angular/common/http';
+import { BreadcrumbComponent } from './layouts/components/breadcrumb/breadcrumb.component';
+import { RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainLayoutComponent,
-    ProjectLayoutComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    BreadcrumbComponent
   ],
   imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
     MainLayoutModule,
     LandingPageModule,
-    ProjectLayoutModule
   ],
   providers: [
     PostsService

@@ -6,18 +6,6 @@ import { PostsService } from 'src/app/configs/posts.service';
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss']
 })
-export class ProjectsComponent implements OnInit {
-
-  public post = [];
-  constructor(
-    private _postService: PostsService
-  ) { }
-
-  ngOnInit(): void {
-    this._postService.getPosts().subscribe(res => {
-      let { post } = res;
-      this.post = post;
-    });
-  }
+export class ProjectsComponent {
 
 }
