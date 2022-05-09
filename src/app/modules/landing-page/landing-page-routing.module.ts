@@ -45,24 +45,9 @@ const routes: Routes = [
             },
             {
                 path: RoutingPath.appRouting.components.landing_page.pages.projects.path,
-                component: ProjectsComponent,
-                data: {
-                    breadcrumb: RoutingPath.appRouting.components.landing_page.pages.projects.breadcrumb
-                },
-                children: [
-                    {
-                        path: "",
-                        component: ProjectsListComponent
-                    },
-                    {
-                        path: RoutingPath.appRouting.components.landing_page.pages.projects.pages.project_details.path,
-                        component: ProjectDetailsComponent,
-                        data: {
-                            breadcrumb: RoutingPath.appRouting.components.landing_page.pages.projects.pages.project_details.breadcrumb
-                        }
-                    }
-                ]
-            },
+                loadChildren: () =>
+                    import('./pages/projects/projects.module').then((m) => m.ProjectsModule)
+            }
         ]
     }
 ];
