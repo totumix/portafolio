@@ -6,6 +6,10 @@ import { SkillComponent } from './pages/skill/skill.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { WorkExperienceComponent } from './pages/work-experience/work-experience.component';
 import { SliderComponent } from './pages/projects/components/slider/slider.component';
+import { LandingPageComponent } from './landing-page.component';
+import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +18,10 @@ import { SliderComponent } from './pages/projects/components/slider/slider.compo
     ContactComponent,
     WorkExperienceComponent,
     SliderComponent,
+    LandingPageComponent,
+    BreadcrumbComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,

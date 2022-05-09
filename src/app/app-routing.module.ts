@@ -1,7 +1,6 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { RoutingPath } from "./configs/routing-path";
-import { MainLayoutComponent } from "./layouts/main-layout/main-layout.component";
 //COMPONENTS
 const routes: Routes = [
   {
@@ -14,7 +13,6 @@ const routes: Routes = [
   },
   {
     path: RoutingPath.appRouting.components.landing_page.path,
-    component: MainLayoutComponent,
     loadChildren: () =>
       import('./modules/landing-page/landing-page.module').then((m) => m.LandingPageModule)
   }

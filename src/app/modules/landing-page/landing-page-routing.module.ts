@@ -8,11 +8,11 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { ProjectsListComponent } from './pages/projects/pages/projects-list/projects-list.component';
 import { ProjectDetailsComponent } from './pages/projects/pages/project-details/project-details.component';
+import { LandingPageComponent } from './landing-page.component';
 const routes: Routes = [
     {
         path: "",
-        pathMatch: "prefix",
-        canActivate: [],
+        component :  LandingPageComponent,
         children: [
             {
                 path: RoutingPath.appRouting.components.landing_page.pages.home.path,
