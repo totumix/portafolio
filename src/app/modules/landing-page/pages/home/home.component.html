@@ -10,21 +10,22 @@
                 <span class="mg-bottom-15 color-green-ovni font-30">Ingeniero de sistemas
                     desarrollador de
                     aplicaciones web .</span><br>
-                <span style="font-size: 2rem ; color:#ccc">
+                <span class="font-30">
                     Experiencia en el desarrollo de software utilizando
                     tecnologías basadas en Javascript, con habilidades en el diseño y
                     maquetado de sitios web y apasionado en enseñar a nuevos desarrolladores WEB, guiando y dando
                     herramientas que permitan el desarrollo de su primer proyecto.
                 </span><br>
-                <button
-                    style="background-color: #81C163 ; padding: 15px 20px ; margin: 20px 0; border-radius: 5px; color: #121f3d; font-weight: bold;">DESCARGAR
-                    CV</button>
+                <button class="btn">DESCARGAR CV</button>
             </div>
         </div>
     </div>
-    <div class="row  ">
+    <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
             <app-skill></app-skill>
         </div>
+    </div>
+    <div (click)="scrollToTop()" class="scroll-to-top" *ngIf="pageYoffset > 0">
+        <img width="50px" src="assets/img/cohete.png" />
     </div>
 </div>
