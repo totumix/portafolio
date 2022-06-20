@@ -1,11 +1,11 @@
-import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-landing-page',
-  templateUrl: './landing-page.component.html',
-  styleUrls: ['./landing-page.component.scss']
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.scss']
 })
-export class LandingPageComponent implements OnInit {
+export class HeaderComponent implements OnInit {
 
   public navegation: string = "ABOUTME";
   public menuOptions = [];
@@ -13,12 +13,11 @@ export class LandingPageComponent implements OnInit {
     this.menuOptions = [
       { label: "ABOUTME", url: "/landing-page/home", hide: false },
       { label: "SKILLS", url: "/landing-page/skill", hide: false },
-      { label: "WORK EXPERIENCE", url: "/landing-page/work-experience", hide: false },
-      { label: "PROJECTS", url: "/landing-page/projects", hide: true },
+      // { label: "EXPERIENCE", url: "/landing-page/work-experience", hide: true },
+      { label: "PROJECTS", url: "/landing-page/projects", hide: false },
       { label: "CONTACT", url: "/landing-page/contact", hide: false },
     ]
   }
-
 
   ngOnInit(): void {
   }
@@ -28,5 +27,4 @@ export class LandingPageComponent implements OnInit {
   selectNavegation(string: string) {
     this.navegation = string;
   }
-
 }

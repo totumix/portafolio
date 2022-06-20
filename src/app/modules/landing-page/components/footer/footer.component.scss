@@ -1,0 +1,27 @@
+@import '../../../../../assets/scss/vars';
+
+footer{
+    border-top: 1px solid $gray;
+    z-index: 10;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    bottom: 0; 
+    right: 0;
+    left: 0;
+    padding: 0 5rem;
+    span{
+        font-size: 1.8rem;
+    }
+    .img-container{
+        position: absolute; 
+        right: 0; 
+        padding-right: 2rem;
+        img{
+            width: 2.5rem;
+            height: 2.5rem;
+            float: right;
+            margin: 0 0.5rem;
+        }
+    }
+}

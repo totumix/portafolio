@@ -1,1 +1,88 @@
+@import '../../../../../assets/scss/vars';
 
+.nav {
+    border-bottom: 0.1rem solid $gray;
+    position: fixed;
+    background-color: $mainBlue;
+    width: 100%;
+}
+
+.nav__checkbox {
+    display: none;
+}
+
+.nav__toggle {
+    cursor: pointer;
+    margin: 0 2rem;
+    position: absolute;
+    right: 0;
+    top: 3rem;
+}
+
+
+
+.nav__toggle .close {
+    display: none;
+}
+
+.nav__menu {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin: 3rem 5rem;
+}
+
+.nav__menu li {
+    display: none;
+    list-style-type: none;
+}
+
+.nav__menu li:first-child {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.nav__menu a {
+    color: inherit;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.menu__logo {
+    
+    height: 3rem;
+    font-size: 2rem;
+}
+
+.menu__logo img {
+    height: 100%;
+}
+
+#nav__checkbox:checked~ul.nav__menu li {
+    display: flex;
+    align-items: center;
+}
+
+#nav__checkbox:checked~label.nav__toggle .close {
+    display: block;
+}
+
+#nav__checkbox:checked~label.nav__toggle .menu {
+    display: none;
+}
+
+@media only screen and (min-width: 560px) {
+    .nav__toggle {
+        display: none;
+    }
+
+    .nav__menu {
+        flex-direction: row;
+    }
+
+    .nav__menu li {
+        display: block;
+    }
+}

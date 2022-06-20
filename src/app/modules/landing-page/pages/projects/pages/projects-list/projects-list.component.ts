@@ -8,7 +8,7 @@ import { PostsService } from 'src/app/configs/posts.service';
 })
 export class ProjectsListComponent implements OnInit {
 
-  public post = [];
+  public posts = [];
   constructor(
     private _postService: PostsService
   ) { }
@@ -16,10 +16,8 @@ export class ProjectsListComponent implements OnInit {
   ngOnInit(): void {
     console.log("entra")
     this._postService.getPosts().subscribe(res => {
-      let { post } = res;
-      this.post = post;
-      console.log(this.post)
-      console.log(this.post)
+      let { posts } = res;
+      this.posts = posts;
     });
   }
 

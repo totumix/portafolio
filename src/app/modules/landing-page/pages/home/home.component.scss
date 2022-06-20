@@ -1,0 +1,13 @@
+@import "../../../../../assets/scss/var-mixins",
+"../../../../../assets/scss/vars";
+
+
+.title{
+    font-size: $size70;
+}
+
+@include mq-max(medium) {
+    .title {
+        font-size: $size50;
+    }
+}

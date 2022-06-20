@@ -1,5 +1,5 @@
 <ul class="cards">
-    <li *ngFor="let post of post">
+    <li *ngFor="let post of posts">
         <a [routerLink]="['/landing-page/projects/project-details' , post._id]" class="card">
             <img [src]="'assets/img/' + post.images[0] " class="card__image" alt="" />
             <div class="card__overlay">
@@ -14,7 +14,8 @@
                     </div>
                 </div>
                 <p class="card__description">{{post.brief}}</p>
-                <button class="u-pointer" style="padding: 10px 0; width: 100%; background-color: #81C163; color: white;">
+                <button class="u-pointer"
+                    style="padding: 10px 0; width: 100%; background-color: #81C163; color: white;">
                     Read more
                 </button>
             </div>
