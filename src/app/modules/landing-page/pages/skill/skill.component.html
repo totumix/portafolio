@@ -1,14 +1,8 @@
-<div class="justify-content-center mg-y-40 color-green-ovni">
-    <h1>HABILIDADES PRINCIPALES</h1>
-</div>
-<div class="row justify-content-center">
-    <div class="mg-y-5 mg-x-10" *ngFor="let skill of skills" style="border-radius: 50%; border : 3px solid #81C163; width: 150px; height: 150px; display: flex; justify-content: center; align-items: center; flex-direction: column;">
-        <img [src]="skill.img" height="100px" />
-        <span class="font-14">{{skill.label}}</span>
-        <div class="justify-content-center">
-            <div class="skills-grid__starts" *ngFor="let checked of skill.points">
-                <div [ngClass]="{'color-orange' : checked , 'color-gray' : !checked}" for="checked">★</div>
-            </div>
-        </div>
+<div class="container-fluid pdd-y-100 justify-content-center align-items-center">
+    <div class="col-lg-5 col-md-12">
+        <ul class="categories-menu">
+            <li [ngClass]="{'active' : tabSelected == categorie.value}" (click)="clickTab(categorie.value)" *ngFor="let categorie of skillsCategories">{{categorie.label}}</li>
+        </ul>
+        <app-skills-list [skills]="skills"></app-skills-list>
     </div>
 </div>

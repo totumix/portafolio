@@ -8,6 +8,7 @@ import { WorkExperienceComponent } from './pages/work-experience/work-experience
 import { LandingPageComponent } from './landing-page.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { SkillsListComponent } from './components/skills-list/skills-list.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FooterComponent } from './components/footer/footer.component';
     WorkExperienceComponent,
     LandingPageComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    SkillsListComponent
   ],
   imports: [
     CommonModule,

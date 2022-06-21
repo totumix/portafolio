@@ -16,16 +16,21 @@
                     maquetado de sitios web y apasionado en enseñar a nuevos desarrolladores WEB, guiando y dando
                     herramientas que permitan el desarrollo de su primer proyecto.
                 </span><br>
-                <button class="btn">DESCARGAR CV</button>
+                <button class="btn align-items-center">DESCARGAR CV
+                    <img class="mg-left-5" src="assets/icon/download.svg" />
+                </button>
             </div>
         </div>
     </div>
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
-            <app-skill></app-skill>
+            <div class="justify-content-center mg-y-40 color-green-ovni u-pointer align-items-center"
+                [routerLink]="'/landing-page/skill'">
+                <h1>HABILIDADES PRINCIPALES</h1>
+                <img class="mg-x-10" width="25px" src="assets/icon/more.svg" />
+            </div>
+            <app-skills-list [skills]="skills"></app-skills-list>
         </div>
     </div>
-    <div (click)="scrollToTop()" class="scroll-to-top" *ngIf="pageYoffset > 0">
-        <img width="50px" src="assets/img/cohete.png" />
-    </div>
+   
 </div>

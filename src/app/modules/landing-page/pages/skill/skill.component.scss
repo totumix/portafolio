@@ -1,13 +1,50 @@
-.linea {
-    margin:0px 20px;
-    width:90px;    
-    border-top:1px solid #999;
-    position: relative;
-    top:10px;
-    float:left;
+@import '../../../../../assets/scss/vars',
+'../../../../../assets/scss/var-mixins';
+
+.categories-menu {
+  list-style-type: none;
+  margin: 5rem auto;
+  padding: 2rem 0;
+  overflow: hidden;
+  background-color: #1b202c;
+  border-radius: 15px;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  font-size: 2rem;
+  border: 1px solid $gray;
+
+  li {
+    float: left;
+    margin: 0 0.5rem;
+    cursor: pointer;
+
+    a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 16px;
+      text-decoration: none;
     }
-  
-  .leyenda {
-    font-weight:bold;
-    float:left;
-   }
+
+  }
+
+  li:hover {
+    text-decoration: underline;
+  }
+}
+
+.active {
+  color: $greenOvni;
+}
+
+@include mq-max(xs-small) {
+  .categories-menu {
+    display: block;
+    text-align: center;
+
+    li {
+      float: none;
+    }
+  }
+}
