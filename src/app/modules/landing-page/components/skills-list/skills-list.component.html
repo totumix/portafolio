@@ -1,7 +1,7 @@
 <div class="row justify-content-center">
-    <div class="skill" *ngFor="let skill of skills">
+    <div class="skill {{customClass}}" *ngFor="let skill of skills">
         <img [src]="skill.img" height="100px" />
-        <span class="font-14">{{skill.label}}</span>
+        <span>{{skill.label}}</span>
         <div class="justify-content-center">
             <div class="skills-grid__starts" *ngFor="let checked of skill.points">
                 <div [ngClass]="{'color-yellow' : checked , 'color-gray' : !checked}" for="checked">★</div>

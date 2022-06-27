@@ -9,6 +9,7 @@ import { LandingPageComponent } from './landing-page.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SkillsListComponent } from './components/skills-list/skills-list.component';
+import { ProjectListComponent } from './components/project-list/project-list.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SkillsListComponent } from './components/skills-list/skills-list.compon
     LandingPageComponent,
     HeaderComponent,
     FooterComponent,
-    SkillsListComponent
+    SkillsListComponent,
+    ProjectListComponent
   ],
   imports: [
     CommonModule,

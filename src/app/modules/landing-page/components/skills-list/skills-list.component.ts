@@ -8,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class SkillsListComponent implements OnInit {
 
   @Input() skills = [];
-
+  @Input() customClass;
   constructor() { }
 
   ngOnInit(): void {

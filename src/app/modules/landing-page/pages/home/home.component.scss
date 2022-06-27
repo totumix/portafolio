@@ -6,6 +6,29 @@
     font-size: $size70;
 }
 
+.section {
+    border-top: 0.1rem solid #2a324b !important;
+    padding: 5rem 0;
+}
+
+.container-subtitle-card {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -7.5rem;
+
+    &__subtitle-card {
+        border: 0.1rem solid $gray;
+        border-radius: 1.5rem;
+        padding: 1rem;
+        background-color: $secondBlue;
+        display: flex;
+        align-items: center;
+        color: $greenOvni;
+        cursor: pointer;
+    }
+}
+
 @include mq-max(medium) {
     .title {
         font-size: $size50;
