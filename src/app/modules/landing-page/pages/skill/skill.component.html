@@ -3,6 +3,6 @@
         <ul class="categories-menu">
             <li [ngClass]="{'active' : tabSelected == categorie.value}" (click)="clickTab(categorie.value)" *ngFor="let categorie of skillsCategories">{{categorie.label}}</li>
         </ul>
-        <app-skills-list [skills]="skills"></app-skills-list>
+        <app-skills-list [skills]="skills" [customClass]="'skill--main-page'"></app-skills-list>
     </div>
 </div>
