@@ -5,7 +5,6 @@ import { RoutingPath } from '../../configs/routing-path';
 import { SkillComponent } from './pages/skill/skill.component';
 import { WorkExperienceComponent } from './pages/work-experience/work-experience.component';
 import { ContactComponent } from './pages/contact/contact.component';
-import { ProjectsComponent } from './pages/projects/projects.component';
 import { LandingPageComponent } from './landing-page.component';
 const routes: Routes = [
     {
@@ -44,7 +43,7 @@ const routes: Routes = [
             {
                 path: RoutingPath.appRouting.components.landing_page.pages.projects.path,
                 loadChildren: () =>
-                    import('./pages/projects/projects.module').then((m) => m.ProjectsModule)
+                    import('../projects/projects.module').then((m) => m.ProjectsModule)
             }
         ]
     }

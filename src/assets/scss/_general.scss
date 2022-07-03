@@ -23,8 +23,16 @@
     font-size: $size24;
   }
 
+  &-25 {
+    font-size: $size25;
+  }
+
   &-30 {
     font-size: $size30;
+  }
+
+  &-40 {
+    font-size: $size40;
   }
 
   &-70 {
@@ -275,3 +283,4 @@
   color: #121f3d;
   font-weight: bold;
 }
+
