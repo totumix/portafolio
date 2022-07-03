@@ -7,13 +7,22 @@
         font-size: $size70;
         font-weight: bold;
     }
-    &__brief{
+
+    &__brief {
         font-size: $size30;
     }
-    &__description{
+
+    &__description {
         font-size: $size30;
     }
-   
+
+    &__download--button {
+        a {
+            color: $secondBlue;
+            text-decoration: none;
+        }
+    }
+
 }
 
 
@@ -47,13 +56,15 @@
             font-size: $size25;
         }
 
-        &__brief{
+        &__brief {
             font-size: $size20;
         }
-        &__description{
+
+        &__description {
             font-size: $size25;
         }
-        &__download--button{
+
+        &__download--button {
             width: 100%;
             justify-content: center;
         }
