@@ -2,9 +2,21 @@
 "../../../../../assets/scss/vars";
 
 
-.title {
-    font-size: $size70;
+.container-presentation {
+    &__title {
+        font-size: $size70;
+        font-weight: bold;
+    }
+    &__brief{
+        font-size: $size30;
+    }
+    &__description{
+        font-size: $size30;
+    }
+   
 }
+
+
 
 .section {
     border-top: 0.1rem solid #2a324b !important;
@@ -30,7 +42,20 @@
 }
 
 @include mq-max(medium) {
-    .title {
-        font-size: $size50;
+    .container-presentation {
+        &__title {
+            font-size: $size25;
+        }
+
+        &__brief{
+            font-size: $size20;
+        }
+        &__description{
+            font-size: $size25;
+        }
+        &__download--button{
+            width: 100%;
+            justify-content: center;
+        }
     }
 }
