@@ -3,7 +3,7 @@
         <div class="project font-30" [routerLink]=" ['/projects/project-details/' , project.projectId]">
             <img [src]="project.img" />
             <p>{{project.title}}</p>
-            <button class="btn w-100  ">Ver más</button>
+            <button class="btn w-100  ">{{"SEE_MORE" | translate}}</button>
         </div>
     </ng-container>
 </div>

@@ -8,11 +8,15 @@
     </label>
 
     <ul class="nav__menu ">
+
         <li class="menu__logo u-pointer " [routerLink]="'/landing-page/home'">
             <img class="close" src="assets/icon/marciano.svg" />
             SEBASTIANCHAVEZ
         </li>
-        <li><a routerLinkActive="active-link"  [routerLink]="'/landing-page/skill'">Habilidades</a></li>
-        <li><a routerLinkActive="active-link" [routerLink]="'/landing-page/projects'">Portafolio</a></li>
+        <li (click)="changeLanguage('es')" class="u-pointer"><img src="assets/img/spain.svg" width="25px" /></li>
+        <li (click)="changeLanguage('en')" class="u-pointer"> <img src="assets/img/usa.svg" width="25px" /></li>
+        <li><a routerLinkActive="active-link" [routerLink]="'/landing-page/skill'">{{"SKILLS" | translate}}</a></li>
+        <li><a routerLinkActive="active-link" [routerLink]="'/landing-page/projects'">{{"PROJECTS" | translate}}</a>
+        </li>
     </ul>
 </nav>

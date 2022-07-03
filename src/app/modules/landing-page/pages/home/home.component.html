@@ -5,19 +5,15 @@
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mg-y-10 align-items-center">
             <div class="container-presentation">
-                <h1 class="mg-bottom-5 u-bold color-green-ovni">¡Hola!. Soy</h1>
+                <h1 class="mg-bottom-5 u-bold color-green-ovni">{{ "HELLO_IM" | translate}}</h1>
                 <span class="container-presentation__title mg-bottom-15 color-green-ovni">SEBASTIAN CHAVEZ</span><br>
-                <span class="container-presentation__brief mg-bottom-15 color-green-ovni font-30">Ingeniero de sistemas
-                    desarrollador de
-                    aplicaciones web .</span><br>
+                <span class="container-presentation__brief mg-bottom-15 color-green-ovni font-30"> {{"BRIEF" |
+                    translate}}</span><br>
                 <span class="container-presentation__description">
-                    Experiencia en el desarrollo de software utilizando
-                    tecnologías basadas en Javascript, con habilidades en el diseño y
-                    maquetado de sitios web y apasionado en enseñar a nuevos desarrolladores WEB, guiando y dando
-                    herramientas que permitan el desarrollo de su primer proyecto.
+                    {{"MY_DESCRIPTION" | translate}}
                 </span><br>
                 <button class="btn align-items-center container-presentation__download--button">
-                    <a  href="assets/pdf/hvjulio2021.pdf" download="Hoja de vida">DESCARGAR CV</a> 
+                    <a href="assets/pdf/hvjulio2021.pdf" download="Hoja de vida">{{"DOWNLOAD_CV" | translate}}</a>
                     <img class="mg-left-5" src="assets/icon/download.svg" />
                 </button>
             </div>
@@ -27,7 +23,7 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 section ">
             <div class="container-subtitle-card">
                 <div class="container-subtitle-card__subtitle-card" [routerLink]="'/landing-page/skill'">
-                    <h1>HABILIDADES PRINCIPALES</h1>
+                    <h1 class="u-uppercase">{{"MAIN_SKILLS" | translate}}</h1>
                     <img class="mg-left-10" width="25px" src="assets/icon/more.svg" />
                 </div>
             </div>
@@ -38,7 +34,7 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 section ">
             <div class="container-subtitle-card">
                 <div class="container-subtitle-card__subtitle-card" [routerLink]="'/landing-page/projects'">
-                    <h1>PORTAFOLIO</h1>
+                    <h1 class="u-uppercase">{{"PROJECTS" | translate}}</h1>
                     <img class=" mg-left-10" width="25px" src="assets/icon/more.svg" />
                 </div>
             </div>

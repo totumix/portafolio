@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,7 @@ export class HeaderComponent implements OnInit {
 
   public navegation: string = "ABOUTME";
   public menuOptions = [];
-  constructor() {
+  constructor( private translate : TranslateService) {
     this.menuOptions = [
       { label: "ABOUTME", url: "/landing-page/home", hide: false },
       { label: "SKILLS", url: "/landing-page/skill", hide: false },
@@ -26,5 +27,10 @@ export class HeaderComponent implements OnInit {
 
   selectNavegation(string: string) {
     this.navegation = string;
+  }
+
+  changeLanguage(language: string) {
+    this.translate.setDefaultLang(language)
+    
   }
 }

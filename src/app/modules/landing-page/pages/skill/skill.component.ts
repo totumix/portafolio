@@ -10,10 +10,10 @@ export class SkillComponent implements OnInit {
   public skills = [];
   public tabSelected = 'technologies'
   public skillsCategories = [
-    { value: 'technologies', label: 'Technologies' },
+    { value: 'technologies', label: 'TECHNOLOGIES' },
     { value: 'frameworks', label: 'Frameworks' },
-    { value: 'tools', label: 'Tools' },
-    { value: 'design', label: 'Design' }
+    { value: 'tools', label: 'TOOLS' },
+    { value: 'design', label: 'DESIGN' }
   ]
   constructor() { }
 

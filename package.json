@@ -20,6 +20,8 @@
     "@angular/platform-browser": "~11.2.3",
     "@angular/platform-browser-dynamic": "~11.2.3",
     "@angular/router": "~11.2.3",
+    "@ngx-translate/core": "^12.1.2",
+    "@ngx-translate/http-loader": "6.0.0",
     "angular-font-awesome": "^3.1.2",
     "angular-responsive-carousel": "^2.1.2",
     "ngx-captcha": "^10.0.0",

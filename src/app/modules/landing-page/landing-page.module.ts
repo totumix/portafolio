@@ -10,6 +10,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SkillsListComponent } from './components/skills-list/skills-list.component';
 import { ProjectsModule } from '../projects/projects.module';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ProjectsModule } from '../projects/projects.module';
   imports: [
     CommonModule,
     LandingPageRoutingModule,
-    ProjectsModule
+    ProjectsModule,
+    TranslateModule
   ]
 })
 export class LandingPageModule { }
