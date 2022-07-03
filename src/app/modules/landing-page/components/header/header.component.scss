@@ -46,9 +46,13 @@
 }
 
 .nav__menu a {
-    color: inherit;
     font-size: 2rem;
     text-decoration: none;
+    color: $white;
+}
+
+.active-link {
+    color: $greenOvni !important;
 }
 
 .menu__logo {
@@ -87,3 +91,4 @@
         display: block;
     }
 }
+

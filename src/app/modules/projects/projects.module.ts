@@ -6,6 +6,7 @@ import { ProjectsComponent } from './projects.component';
 import { ProjectDetailsComponent } from './pages/project-details/project-details.component';
 import { ProjectListComponent } from './components/project-list/project-list.component';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
+import { ProjectsLayoutComponent } from './pages/projects-layout/projects-layout.component';
 
 const routes: Routes = [
   {
@@ -18,7 +19,7 @@ const routes: Routes = [
     children: [
       {
         path: "",
-        component: ProjectsComponent
+        component: ProjectsLayoutComponent
       },
       {
         path: RoutingPath.appRouting.components.landing_page.pages.projects.pages.project_details.path,
@@ -35,7 +36,8 @@ const routes: Routes = [
   declarations: [
     ProjectsComponent,
     ProjectDetailsComponent,
-    ProjectListComponent
+    ProjectListComponent,
+    ProjectsLayoutComponent
   ],
   imports: [
     CommonModule,
