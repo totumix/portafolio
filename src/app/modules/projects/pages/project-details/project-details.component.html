@@ -18,11 +18,11 @@
                     <source [src]="post.video" type="video/mp4" >
                 </video>
                 <div class="title-container">
-                    <span class="title-container__title">SOBRE ESTE PROYECTO</span>
+                    <span class="title-container__title">{{ "ABOUT_THIS_PROJECT" | translate}}</span>
                 </div>
                 <p>{{post?.description}}</p>
                 <div class="title-container">
-                    <span class="title-container__title">TECNOLOGÍAS</span>
+                    <span class="title-container__title ">{{ "TECHNOLOGIES" | translate}}</span>
                 </div>
                 <ul class="pdd-left-20">
                     <li *ngFor="let tag of post.tags">{{tag}}</li>
