@@ -7,12 +7,15 @@
     margin: 20px 20px;
     text-align: center;
     color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     // -webkit-box-shadow: 0px 0px 15px 0px #000000;
     // box-shadow: 0px 0px 15px 0px #000000;
     border: 1px solid $gray;
     img {
-        height: 250px;
-        width: 350px;
+        height: 10rem;
+        width: 15rem;
     }
 }
 
