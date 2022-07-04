@@ -4,16 +4,16 @@
 
 .container-presentation {
     &__title {
-        font-size: $size70;
+        font-size: $size50;
         font-weight: bold;
     }
 
     &__brief {
-        font-size: $size30;
+        font-size: $size25;
     }
 
     &__description {
-        font-size: $size30;
+        font-size: $size20;
     }
 
     &__download--button {
