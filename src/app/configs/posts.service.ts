@@ -9,19 +9,19 @@ export class PostsService {
   private url: string;
   private options;
 
-  constructor(
-    private _http: HttpClient
-  ) {
-    this.url = `${environment.serverUrl}`;
-    this.options = { headers: contentHeaders }
-  }
+  // constructor(
+  //   private _http: HttpClient
+  // ) {
+  //   this.url = `${environment.serverUrl}`;
+  //   this.options = { headers: contentHeaders }
+  // }
 
-  getPosts(): Observable<any> {
-    return this._http.get(this.url + 'posts', this.options)
-  }
+  // getPosts(): Observable<any> {
+  //   return this._http.get(this.url + 'posts', this.options)
+  // }
 
-  getPost(postId): Observable<any> {
-    return this._http.get(this.url + 'post/' + postId, this.options)
-  }
+  // getPost(postId): Observable<any> {
+  //   return this._http.get(this.url + 'post/' + postId, this.options)
+  // }
 
 }
