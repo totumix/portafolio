@@ -6,6 +6,7 @@
     background-color: $mainBlue;
     width: 100%;
     z-index: 10;
+    color: $greenOvni;
 }
 
 .nav__checkbox {
@@ -48,11 +49,11 @@
 .nav__menu a {
     font-size: 2rem;
     text-decoration: none;
-    color: $white;
+    color: $greenOvni;
 }
 
 .active-link {
-    color: $greenOvni !important;
+    color: white !important;
 }
 
 .menu__logo {
@@ -78,7 +79,7 @@
     display: none;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 768px) {
     .nav__toggle {
         display: none;
     }
