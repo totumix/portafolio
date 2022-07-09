@@ -17,7 +17,7 @@ export class PostsService {
   }
 
   getPost(postId): Observable<any> {
-    return this._backendService.getAuth('posts/')
+    return this._backendService.get(`${post.post}${postId}`)
   }
 
 }

@@ -12,4 +12,8 @@ export class PostsManager {
     getPosts(){
         return this.postsService.getPosts();
     }
+
+    getPost(postId){
+        return this.postsService.getPost(postId);
+    }
 }

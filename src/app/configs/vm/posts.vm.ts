@@ -15,4 +15,8 @@ export class PostsVm {
   getPosts(){
    return this.postsManager.getPosts();
   }
+
+  getPost(postId){
+    return this.postsManager.getPost(postId);
+  }
 }
