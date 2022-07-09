@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BackendService } from 'src/app/configs/backend.service';
+import { PostsService } from 'src/app/configs/services/posts.service';
 import { IPost } from 'src/app/core/models/Post.interface';
 @Component({
   selector: 'app-project-list',
@@ -8,20 +9,15 @@ import { IPost } from 'src/app/core/models/Post.interface';
 })
 export class ProjectListComponent implements OnInit {
 
-  public posts : IPost[]
+  public posts: IPost[]
   constructor(
-    private _backendService: BackendService
+    private vm: PostsService
   ) { }
 
   ngOnInit(): void {
-    this._backendService.getAuth('posts/').subscribe(
-         res => {
-          let { posts } = res;
-          this.posts = posts;
-         },
-         err => {
-         }
-       )
+    this.vm.getPosts().subscribe(res => {
+      let {posts} = res;
+      this.posts = posts;
+    })
   }
-
 }

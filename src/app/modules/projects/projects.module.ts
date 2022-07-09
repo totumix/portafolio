@@ -8,6 +8,7 @@ import { ProjectListComponent } from './components/project-list/project-list.com
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { ProjectsLayoutComponent } from './pages/projects-layout/projects-layout.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { PostsService } from 'src/app/configs/services/posts.service';
 
 const routes: Routes = [
   {
@@ -45,6 +46,9 @@ const routes: Routes = [
     IvyCarouselModule,
     TranslateModule,
     RouterModule.forChild(routes)
+  ],
+  providers:[
+    PostsService
   ],
   exports: [
     ProjectListComponent
