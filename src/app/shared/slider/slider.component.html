@@ -1,0 +1,5 @@
+<swiper class="w-100" [config]="config">
+    <ng-template swiperSlide *ngFor="let file of files">
+        <img (click)="clickFile()" class="w-100" [src]="'http://localhost:3800/api/img-post/' + file">
+    </ng-template>
+</swiper>

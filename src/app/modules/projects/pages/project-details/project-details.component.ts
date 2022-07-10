@@ -1,9 +1,7 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PostsVm } from 'src/app/configs/vm/posts.vm';
-import SwiperCore, { SwiperOptions, EffectCoverflow, Autoplay, Pagination } from 'swiper';
 
-SwiperCore.use([EffectCoverflow, Autoplay, Pagination]);
 @Component({
   selector: 'app-project-details',
   templateUrl: './project-details.component.html',
@@ -13,8 +11,7 @@ export class ProjectDetailsComponent implements OnInit {
 
   public postId: string;
   public post;
-  public innerWidth;
- 
+
   constructor(
     private route: ActivatedRoute,
     private vm: PostsVm
@@ -33,14 +30,7 @@ export class ProjectDetailsComponent implements OnInit {
     })
   }
 
-  config: SwiperOptions = {
-    pagination: { clickable: true },
-    scrollbar: { draggable: true },
-    autoplay: {
-      delay: 3000
-    },
-    loop: true,
-    effect: 'coverflow'
-  };
+ 
+
 
 }

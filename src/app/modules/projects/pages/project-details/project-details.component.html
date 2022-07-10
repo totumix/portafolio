@@ -8,11 +8,7 @@
                 <div>
                     {{post?.brief}}
                 </div>
-                <swiper class="w-100"   [config]="config" >
-                    <ng-template swiperSlide *ngFor="let file of post?.files">
-                        <img class="w-100" [src]="'http://localhost:3800/api/img-post/' + file">
-                    </ng-template>
-                </swiper>
+                <app-slider [files]="post?.files"></app-slider>
                 <video *ngIf="post.video" width="100%" autoplay controls>
                     <source [src]="post.video" type="video/mp4">
                 </video>

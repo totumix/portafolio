@@ -9,7 +9,7 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { ProjectsLayoutComponent } from './pages/projects-layout/projects-layout.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { PostsService } from 'src/app/configs/services/posts.service';
-import { SwiperModule } from 'swiper/angular';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 const routes: Routes = [
   {
@@ -46,7 +46,7 @@ const routes: Routes = [
     CommonModule,
     IvyCarouselModule,
     TranslateModule,
-    SwiperModule,
+    SharedModule,
     RouterModule.forChild(routes)
   ],
   providers:[
