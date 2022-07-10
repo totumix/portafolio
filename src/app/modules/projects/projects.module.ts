@@ -9,6 +9,7 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { ProjectsLayoutComponent } from './pages/projects-layout/projects-layout.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { PostsService } from 'src/app/configs/services/posts.service';
+import { SwiperModule } from 'swiper/angular';
 
 const routes: Routes = [
   {
@@ -45,6 +46,7 @@ const routes: Routes = [
     CommonModule,
     IvyCarouselModule,
     TranslateModule,
+    SwiperModule,
     RouterModule.forChild(routes)
   ],
   providers:[

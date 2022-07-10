@@ -1,7 +1,9 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PostsVm } from 'src/app/configs/vm/posts.vm';
+import SwiperCore, { SwiperOptions, EffectCoverflow, Autoplay, Pagination } from 'swiper';
 
+SwiperCore.use([EffectCoverflow, Autoplay, Pagination]);
 @Component({
   selector: 'app-project-details',
   templateUrl: './project-details.component.html',
@@ -9,17 +11,10 @@ import { PostsVm } from 'src/app/configs/vm/posts.vm';
 })
 export class ProjectDetailsComponent implements OnInit {
 
-
-
   public postId: string;
   public post;
   public innerWidth;
-  public carouselHeightValue;
-
-  @HostListener('window:resize', ['$event'])
-  onResize(event) {
-    this.carouselHeight();
-  }
+ 
   constructor(
     private route: ActivatedRoute,
     private vm: PostsVm
@@ -28,27 +23,24 @@ export class ProjectDetailsComponent implements OnInit {
   ngOnInit() {
     this.postId = this.route.snapshot.params.projectId;
     this.getPost(this.postId)
-    this.carouselHeight();
-  }
-
-  carouselHeight() {
-    this.innerWidth = window.innerWidth;
-    if (this.innerWidth < 480) {
-      this.carouselHeightValue = 200;
-    }
-    if (this.innerWidth > 480 && this.innerWidth < 767) {
-      this.carouselHeightValue = 300;
-    }
-    if (this.innerWidth > 1200) {
-      this.carouselHeightValue = 550;
-    }
   }
 
   getPost(postId) {
     this.vm.getPost(postId).subscribe(res => {
-      let { post }  = res;
+      let { post } = res;
       this.post = post;
+      console.log(this.post)
     })
   }
+
+  config: SwiperOptions = {
+    pagination: { clickable: true },
+    scrollbar: { draggable: true },
+    autoplay: {
+      delay: 3000
+    },
+    loop: true,
+    effect: 'coverflow'
+  };
 
 }

@@ -8,14 +8,13 @@
                 <div>
                     {{post?.brief}}
                 </div>
-                <carousel  *ngIf="!post.video" loop="true" cellsToShow="1" counter="true" autoplay="true" autoplayInterval="3000"
-                    height="{{carouselHeightValue}}">
-                    <div class="carousel-cell" *ngFor="let file of post?.files">
-                        <img [src]="'http://localhost:3800/api/img-post/' + file" >
-                    </div>
-                </carousel>
+                <swiper class="w-100"   [config]="config" >
+                    <ng-template swiperSlide *ngFor="let file of post?.files">
+                        <img class="w-100" [src]="'http://localhost:3800/api/img-post/' + file">
+                    </ng-template>
+                </swiper>
                 <video *ngIf="post.video" width="100%" autoplay controls>
-                    <source [src]="post.video" type="video/mp4" >
+                    <source [src]="post.video" type="video/mp4">
                 </video>
                 <div class="title-container">
                     <span class="title-container__title">{{ "ABOUT_THIS_PROJECT" | translate}}</span>

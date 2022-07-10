@@ -8,7 +8,9 @@
 "assets/scss/breadcrumb",
 "assets/scss/contactForm";
 
-
+@import 'swiper/scss';
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/pagination';
 
 @font-face {
     font-family: roboto-regular;
