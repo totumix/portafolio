@@ -1,0 +1,1 @@
+{"ast":null,"code":"export const post = {\n  posts: 'posts/',\n  post: 'post/'\n};","map":null,"metadata":{},"sourceType":"module"}
