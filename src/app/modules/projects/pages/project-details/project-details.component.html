@@ -10,8 +10,8 @@
                 </div>
                 <carousel  *ngIf="!post.video" loop="true" cellsToShow="1" counter="true" autoplay="true" autoplayInterval="3000"
                     height="{{carouselHeightValue}}">
-                    <div class="carousel-cell" *ngFor="let image of post.images">
-                        <img [src]="image" >
+                    <div class="carousel-cell" *ngFor="let file of post?.files">
+                        <img [src]="'http://localhost:3800/api/img-post/' + file" >
                     </div>
                 </carousel>
                 <video *ngIf="post.video" width="100%" autoplay controls>
