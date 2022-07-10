@@ -17,7 +17,8 @@ export class SliderComponent implements OnInit {
       delay: 3000
     },
     loop: true,
-    effect: 'coverflow'
+    effect: 'coverflow',
+    autoHeight: true
   };
   constructor() { }
 

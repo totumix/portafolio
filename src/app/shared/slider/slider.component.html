@@ -1,5 +1,7 @@
 <swiper class="w-100" [config]="config">
     <ng-template swiperSlide *ngFor="let file of files">
-        <img (click)="clickFile()" class="w-100" [src]="'http://localhost:3800/api/img-post/' + file">
+        <div class="justify-content-center">
+            <img (click)="clickFile()" class="" style="max-height: 500px ; max-width: 100% ;"  [src]="'http://localhost:3800/api/img-post/' + file">
+        </div>
     </ng-template>
 </swiper>
