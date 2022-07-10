@@ -10,18 +10,18 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    gap: 1.5rem;
     // -webkit-box-shadow: 0px 0px 15px 0px #000000;
     // box-shadow: 0px 0px 15px 0px #000000;
     border: 1px solid $gray;
     img {
-        height: 10rem;
-        width: 15rem;
+        height: 15rem;
+        width: 100%;
+        border-radius: 0.5rem;
     }
 }
 
 .project:hover {
-    background-color: $greenOvni;
-    color: $mainBlue;
     font-weight: bold;
     cursor: pointer;
     top: -10px;
