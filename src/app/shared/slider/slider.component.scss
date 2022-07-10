@@ -1,0 +1,11 @@
+swiper{
+    width: 100%;
+    .slide{
+        justify-content: center;
+        display: flex;
+        img{
+            max-height: 50rem;
+            max-width: 100%;
+        }
+    }
+}
