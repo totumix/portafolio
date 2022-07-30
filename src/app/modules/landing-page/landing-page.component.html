@@ -1,6 +1,13 @@
 <app-header></app-header>
-<router-outlet></router-outlet>
-<div (click)="scrollToTop()" class="scroll-to-top" *ngIf="pageYoffset > 0">
-    <img width="50px" src="assets/img/cohete.png" />
+<div class="container-fluid pdd-y-110">
+    <!-- <div class="row ">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pdd-x-50 pdd-y-10 justify-content-center">
+            <app-breadcrumb></app-breadcrumb>
+        </div>
+    </div> -->
+    <router-outlet></router-outlet>
+    <div (click)="scrollToTop()" class="scroll-to-top" *ngIf="pageYoffset > 0">
+        <img width="50px" src="assets/img/cohete.png" />
+    </div>
+    <app-footer></app-footer>
 </div>
-<app-footer></app-footer>

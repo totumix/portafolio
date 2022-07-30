@@ -1,44 +1,42 @@
-<div class="container-fluid pdd-y-80">
-    <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-            <img src="assets/img/perfil.svg" />
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mg-y-10 align-items-center">
-            <div class="container-presentation">
-                <h1 class="mg-bottom-5 u-bold color-green-ovni">{{ "HELLO_IM" | translate}}</h1>
-                <span class="container-presentation__title mg-bottom-15 color-green-ovni">SEBASTIAN CHAVEZ</span><br>
-                <span class="container-presentation__brief mg-bottom-15 color-green-ovni font-30"> {{"BRIEF" |
-                    translate}}</span><br>
-                <span class="container-presentation__description">
-                    {{"MY_DESCRIPTION" | translate}}
-                </span><br>
-                <button class="btn mg-y-10 align-items-center container-presentation__download--button">
-                    <a href="assets/pdf/hvjulio2021.pdf" download="Hoja de vida">{{"DOWNLOAD_CV" | translate}}</a>
-                    <img class="mg-left-5" src="assets/icon/download.svg" />
-                </button>
-            </div>
+<div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+        <img src="assets/img/perfil.svg" />
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mg-y-10 align-items-center">
+        <div class="container-presentation">
+            <h1 class="mg-bottom-5 u-bold color-green-ovni">{{ "HELLO_IM" | translate}}</h1>
+            <span class="container-presentation__title mg-bottom-15 color-green-ovni">SEBASTIAN CHAVEZ</span><br>
+            <span class="container-presentation__brief mg-bottom-15 color-green-ovni font-30"> {{"BRIEF" |
+                translate}}</span><br>
+            <span class="container-presentation__description">
+                {{"MY_DESCRIPTION" | translate}}
+            </span><br>
+            <button class="btn mg-y-10 align-items-center container-presentation__download--button">
+                <a href="assets/pdf/hvjulio2021.pdf" download="Hoja de vida">{{"DOWNLOAD_CV" | translate}}</a>
+                <img class="mg-left-5" src="assets/icon/download.svg" />
+            </button>
         </div>
     </div>
-    <div class="row mg-y-50">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 section ">
-            <div class="container-subtitle-card">
-                <div class="container-subtitle-card__subtitle-card" [routerLink]="'/landing-page/skill'">
-                    <h1 class="u-uppercase">{{"MAIN_SKILLS" | translate}}</h1>
-                    <img class="mg-left-10" width="25px" src="assets/icon/more.svg" />
-                </div>
+</div>
+<div class="row mg-y-50">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 section ">
+        <div class="container-subtitle-card">
+            <div class="container-subtitle-card__subtitle-card" [routerLink]="'/landing-page/skill'">
+                <h1 class="u-uppercase">{{"MAIN_SKILLS" | translate}}</h1>
+                <img class="mg-left-10" width="25px" src="assets/icon/more.svg" />
             </div>
-            <app-skills-list [skills]="skills" [customClass]="'skill--home'"></app-skills-list>
         </div>
+        <app-skills-list [skills]="skills" [customClass]="'skill--home'"></app-skills-list>
     </div>
-    <div class="row mg-y-50 ">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 section ">
-            <div class="container-subtitle-card">
-                <div class="container-subtitle-card__subtitle-card" [routerLink]="'/landing-page/projects'">
-                    <h1 class="u-uppercase">{{"PROJECTS" | translate}}</h1>
-                    <img class=" mg-left-10" width="25px" src="assets/icon/more.svg" />
-                </div>
+</div>
+<div class="row mg-y-50 ">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 section ">
+        <div class="container-subtitle-card">
+            <div class="container-subtitle-card__subtitle-card" [routerLink]="'/landing-page/projects'">
+                <h1 class="u-uppercase">{{"PROJECTS" | translate}}</h1>
+                <img class=" mg-left-10" width="25px" src="assets/icon/more.svg" />
             </div>
-            <app-project-list></app-project-list>
         </div>
+        <app-project-list></app-project-list>
     </div>
 </div>

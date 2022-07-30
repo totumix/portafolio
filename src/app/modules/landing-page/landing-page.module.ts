@@ -11,6 +11,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SkillsListComponent } from './components/skills-list/skills-list.component';
 import { ProjectsModule } from '../projects/projects.module';
 import { TranslateModule } from '@ngx-translate/core';
+import { BreadcrumbModule } from 'src/app/shared/breadcrumb/breadcrumb.module';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { TranslateModule } from '@ngx-translate/core';
     CommonModule,
     LandingPageRoutingModule,
     ProjectsModule,
-    TranslateModule
+    TranslateModule,
+    BreadcrumbModule
   ]
 })
 export class LandingPageModule { }
