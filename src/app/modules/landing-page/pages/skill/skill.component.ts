@@ -35,7 +35,6 @@ export class SkillComponent implements OnInit {
     }
     if (this.tabSelected == 'frameworks') {
       this.skills = [
-        { label: "Material Angular", points: [true, true, true, true, true], img: 'assets/img/html.png' },
         { label: "Angular 2+", points: [true, true, true, true, false], img: 'assets/img/angular.png' },
         { label: "Nodejs", points: [true, true, true, true, false], img: 'assets/img/nodejs.png' },
         { label: "Boostrap", points: [true, true, true, true, false], img: 'assets/img/bootstrap.png' },

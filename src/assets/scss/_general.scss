@@ -107,7 +107,7 @@
       background-color: $secondBlue;
       display: flex;
       align-items: center;
-      color: $greenOvni;
+      color: $greenOvni !important;
       cursor: pointer;
   }
 }

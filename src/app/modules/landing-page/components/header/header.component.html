@@ -9,14 +9,17 @@
 
     <ul class="nav__menu ">
 
-        <li routerLinkActive="container-subtitle-card__subtitle-card" class="menu__logo u-pointer color-green " [routerLink]="'/landing-page/home'">
+        <li routerLinkActive="container-subtitle-card__subtitle-card" class="menu__logo u-pointer "
+            [routerLink]="'/landing-page/home'">
             <img class="close" src="assets/icon/marciano.svg" />
             SEBASTIANCHAVEZ
         </li>
         <li (click)="changeLanguage('es')" class="u-pointer"><img src="assets/img/spain.svg" width="25" /></li>
         <li (click)="changeLanguage('en')" class="u-pointer"> <img src="assets/img/usa.svg" width="25" /></li>
-        <li><a routerLinkActive="container-subtitle-card__subtitle-card" [routerLink]="'/landing-page/skill'">{{"SKILLS" | translate}}</a></li>
-        <li><a routerLinkActive="container-subtitle-card__subtitle-card" [routerLink]="'/landing-page/projects'">{{"PROJECTS" | translate}}</a>
+        <li><a routerLinkActive="container-subtitle-card__subtitle-card color-green-ovni"
+                [routerLink]="'/landing-page/skill'">{{"SKILLS" | translate}}</a></li>
+        <li><a routerLinkActive="container-subtitle-card__subtitle-card"
+                [routerLink]="'/landing-page/projects'">{{"PROJECTS" | translate}}</a>
         </li>
     </ul>
 </nav>
