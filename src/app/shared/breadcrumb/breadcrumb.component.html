@@ -1,6 +1,6 @@
 <ol class="breadcrumb">
     <li *ngFor="let breadcrumb of breadcrumbs">
-        <span (click)="goUrl(breadcrumb.url)" routerLinkActive="router-link-active">
+        <span *ngIf="breadcrumb.url != '/' + _constRoutes.landingHomeUrl" (click)="goUrl(breadcrumb.url)" routerLinkActive="router-link-active">
             {{ breadcrumb.label }}
         </span>
     </li>
