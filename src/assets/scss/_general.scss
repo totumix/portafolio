@@ -55,7 +55,8 @@
   &-green-ovni {
     color: $greenOvni;
   }
-  &-yellow{
+
+  &-yellow {
     color: $yellow;
   }
 }
@@ -101,14 +102,14 @@
   top: -7.5rem;
 
   &__subtitle-card {
-      border: 0.1rem solid $gray;
-      border-radius: 1.5rem;
-      padding: 1rem;
-      background-color: $secondBlue;
-      display: flex;
-      align-items: center;
-      color: $greenOvni !important;
-      cursor: pointer;
+    border: 0.1rem solid $gray;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    background-color: $secondBlue;
+    display: flex;
+    align-items: center;
+    color: $greenOvni ;
+    cursor: pointer;
   }
 }
 
@@ -301,4 +302,3 @@
   font-weight: bold;
   cursor: pointer;
 }
-
