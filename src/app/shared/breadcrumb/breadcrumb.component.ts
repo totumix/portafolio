@@ -79,16 +79,11 @@ export class BreadcrumbComponent implements OnInit {
     return newBreadcrumbs;
   }
 
-  // goUrl(url) {
-  //   if (url == `/${this._constRoutes.brandModuleUrl}`) {
-  //     this.router.navigate([`${url}/${this._constRoutes.brandHomeUrl}`]);
-  //   } else {
-  //     if (this.campaign && (url == `/${this._constRoutes.campaignModuleUrl}/${this.campaign._id}`)) {
-  //       this.router.navigate([`${url}/${this._constRoutes.campaignHomeUrl}`]);
-  //     } else {
-  //       this.router.navigate([url]);
-  //     }
-  //   }
-  // }
+  goUrl(url) {
+    this.router.navigate([url]);
+    if (url == `/${this._constRoutes.landingModuleUrl}`) {
+      this.router.navigate([`${url}/${this._constRoutes.landingHomeUrl}`]);
+    }
+  }
 
 }

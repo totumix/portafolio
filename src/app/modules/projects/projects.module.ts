@@ -16,9 +16,6 @@ const routes: Routes = [
 
     path: "",
     component: ProjectsComponent,
-    data: {
-      breadcrumb: RoutingPath.appRouting.components.landing_page.pages.projects.breadcrumb
-    },
     children: [
       {
         path: "",

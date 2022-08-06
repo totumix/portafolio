@@ -42,6 +42,9 @@ const routes: Routes = [
             },
             {
                 path: RoutingPath.appRouting.components.landing_page.pages.projects.path,
+                data: {
+                    breadcrumb: RoutingPath.appRouting.components.landing_page.pages.projects.breadcrumb
+                },
                 loadChildren: () =>
                     import('../projects/projects.module').then((m) => m.ProjectsModule)
             }
