@@ -10,6 +10,8 @@ import { ProjectsLayoutComponent } from './pages/projects-layout/projects-layout
 import { TranslateModule } from '@ngx-translate/core';
 import { PostsService } from 'src/app/configs/services/posts.service';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { CategoriesService } from 'src/app/configs/services/categories.service';
+import { ArticlesService } from 'src/app/configs/services/articles.service';
 
 const routes: Routes = [
   {
@@ -47,7 +49,9 @@ const routes: Routes = [
     RouterModule.forChild(routes)
   ],
   providers:[
-    PostsService
+    PostsService,
+    CategoriesService,
+    ArticlesService
   ],
   exports: [
     ProjectListComponent
