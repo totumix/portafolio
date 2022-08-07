@@ -29,7 +29,7 @@ export class BreadcrumbComponent implements OnInit {
       distinctUntilChanged(),
     ).subscribe(() => {
       this.breadcrumbs = this.buildBreadCrumb(this.activatedRoute.root);
-      console.log(this.breadcrumbs)
+      this._constRoutes.changeRoute(this.router.url)
     })
   }
 

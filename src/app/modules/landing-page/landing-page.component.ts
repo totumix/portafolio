@@ -1,5 +1,6 @@
 import { ViewportScroller } from '@angular/common';
-import { Component, ElementRef, HostListener, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { ConstRoutesService } from 'src/app/configs/const-routes.service';
 
 @Component({
   selector: 'app-landing-page',
@@ -10,31 +11,42 @@ export class LandingPageComponent implements OnInit {
 
   public navegation: string = "ABOUTME";
   public menuOptions = [];
+  public hideHomeBreadCrumb: boolean;
   pageYoffset = 0;
+  currentRoute: string;
   @HostListener('window:scroll', ['$event']) onScroll(event) {
     this.pageYoffset = window.pageYOffset;
   }
 
-  constructor(private scroll: ViewportScroller) {
-    this.menuOptions = [
-      { label: "ABOUTME", url: "/landing-page/home", hide: false },
-      { label: "SKILLS", url: "/landing-page/skill", hide: false },
-      { label: "WORK EXPERIENCE", url: "/landing-page/work-experience", hide: false },
-      { label: "PROJECTS", url: "/landing-page/projects", hide: true },
-      { label: "CONTACT", url: "/landing-page/contact", hide: false },
-    ]
-  }
+  constructor(
+    private scroll: ViewportScroller,
+    public _constRoutes: ConstRoutesService,
+  ) { }
 
 
   ngOnInit(): void {
+    this._constRoutes.actualRoute.subscribe(actualRoute => {
+      this.hideHomeBreadCrumb = this.showBreadCrumb(actualRoute);
+    })
+    this.menuOptions = [
+      { label: "ABOUTME", url: `${this._constRoutes.landingModuleUrl}/${this._constRoutes.landingHomeUrl}`, hide: false },
+      { label: "SKILLS", url: `${this._constRoutes.landingModuleUrl}/${this._constRoutes.landingSkillsUrl}`, hide: false },
+      { label: "WORK EXPERIENCE", url: `${this._constRoutes.landingModuleUrl}/${this._constRoutes.landingExperiencesUrl}`, hide: false },
+      { label: "PROJECTS", url: `${this._constRoutes.landingModuleUrl}/${this._constRoutes.landingProjectsUrl}`, hide: true },
+      { label: "CONTACT", url: `${this._constRoutes.landingModuleUrl}/${this._constRoutes.landingContactUrl}`, hide: false },
+    ]
   }
 
   scrollToTop() {
     this.scroll.scrollToPosition([0, 0]);
   }
-  
+
   selectNavegation(string: string) {
     this.navegation = string;
+  }
+
+  showBreadCrumb(url) {
+    return url == `/${this._constRoutes.landingModuleUrl}/${this._constRoutes.landingHomeUrl}` ? true : false;
   }
 
 }

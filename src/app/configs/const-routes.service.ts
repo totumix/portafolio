@@ -1,16 +1,12 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
+import { BehaviorSubject } from 'rxjs';
 import { RoutingPath } from './routing-path';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ConstRoutesService {
-  //SSO
-  // public ssoModuleUrl = RoutingPath.appRouting.components.sso.path;
-  // public ssoLoginUrl = RoutingPath.appRouting.components.sso.pages.login.path;
-  // public ssoSignupUrl = RoutingPath.appRouting.components.sso.pages.signup_user.path;
-  // public ssoResetPasswordUrl = RoutingPath.appRouting.components.sso.pages.reset_password.path;
-
   //Landing
   public landingModuleUrl = RoutingPath.appRouting.components.landing_page.path;
   public landingHomeUrl = RoutingPath.appRouting.components.landing_page.pages.home.path;
@@ -19,9 +15,14 @@ export class ConstRoutesService {
   public landingContactUrl = RoutingPath.appRouting.components.landing_page.pages.contact.path;
   public landingProjectsUrl = RoutingPath.appRouting.components.landing_page.pages.projects.path;
   public projectDetailsUrl = RoutingPath.appRouting.components.landing_page.pages.projects.pages.project_details.path.split('/', 1)[0];
+  private route = new BehaviorSubject(this.router.url);
+  actualRoute = this.route.asObservable();
 
+  constructor(private router: Router) {
+  }
 
-  
-  constructor() { }
+  changeRoute(route) {
+    this.route.next(route)
+  }
 
 }
