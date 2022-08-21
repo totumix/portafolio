@@ -7,7 +7,7 @@ export class PostsService {
 
   constructor(
     private _backendService: BackendService
-  ) {}
+  ) { }
 
   getPosts(): Observable<any> {
     return this._backendService.getAuth(`${post.posts}`)
@@ -15,6 +15,10 @@ export class PostsService {
 
   getPost(postId): Observable<any> {
     return this._backendService.get(`${post.post}${postId}`)
+  }
+
+  getPostsArticle(articleId): Observable<any> {
+    return this._backendService.get(`${post.postsArticle}${articleId}`)
   }
 
 }

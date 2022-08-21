@@ -9,11 +9,15 @@ export class PostsManager {
         private postsService: PostsService
     ) { }
 
-    getPosts(){
+    getPosts() {
         return this.postsService.getPosts();
     }
 
-    getPost(postId){
+    getPostsArticle(articleId) {
+        return this.postsService.getPostsArticle(articleId);
+    }
+
+    getPost(postId) {
         return this.postsService.getPost(postId);
     }
 }
