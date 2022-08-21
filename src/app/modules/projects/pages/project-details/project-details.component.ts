@@ -1,6 +1,9 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { PostsVm } from 'src/app/configs/vm/posts.vm';
+import { Observable } from 'rxjs';
+import { ProjectDetailsVm } from 'src/app/configs/vm/project-details.vm';
+import { IArticle } from 'src/app/core/models/article.interface';
+// import { PostsVm } from 'src/app/configs/vm/project-list.vm';
 
 @Component({
   selector: 'app-project-details',
@@ -9,28 +12,26 @@ import { PostsVm } from 'src/app/configs/vm/posts.vm';
 })
 export class ProjectDetailsComponent implements OnInit {
 
-  public postId: string;
-  public post;
+  public articleId: string;
+  public article: IArticle;
 
   constructor(
     private route: ActivatedRoute,
-    private vm: PostsVm
+    private vm: ProjectDetailsVm
   ) { }
 
   ngOnInit() {
-    this.postId = this.route.snapshot.params.projectId;
-    this.getPost(this.postId)
+    this.articleId = this.route.snapshot.params.projectId;
+    this.getArticle(this.articleId)
   }
 
-  getPost(postId) {
-    this.vm.getPost(postId).subscribe(res => {
-      let { post } = res;
-      this.post = post;
-      console.log(this.post)
+  getArticle(articleId) {
+    this.vm.getPostsArticle(articleId).subscribe(article => {
+      this.article = article
     })
   }
 
- 
+
 
 
 }

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { BackendService } from 'src/app/configs/backend.service';
-import { PostsService } from 'src/app/configs/services/posts.service';
-import { IPost } from 'src/app/core/models/Post.interface';
+import { ProjectListVm } from 'src/app/configs/vm/project-list.vm';
+import { IArticle } from 'src/app/core/models/article.interface';
 @Component({
   selector: 'app-project-list',
   templateUrl: './project-list.component.html',
@@ -9,15 +8,15 @@ import { IPost } from 'src/app/core/models/Post.interface';
 })
 export class ProjectListComponent implements OnInit {
 
-  public posts: IPost[]
+  public articles: IArticle[]
   constructor(
-    private vm: PostsService
+    private vm: ProjectListVm
   ) { }
 
   ngOnInit(): void {
-    this.vm.getPosts().subscribe(res => {
-      let {posts} = res;
-      this.posts = posts;
+    this.vm.getArticlesWithCategory('Portafolio').subscribe(res => {
+      let { total, articles } = res;
+      this.articles = articles;
     })
   }
 }
