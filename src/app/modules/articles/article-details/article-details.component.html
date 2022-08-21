@@ -1,0 +1,12 @@
+<div *ngIf="article" class="article-container">
+    <div class="title-container">
+        <span class="title-container__title">{{article?.name}}</span>
+    </div>
+    <img [src]="'http://localhost:3800/api/img-article/' + article?.photo" />
+    <div>
+        {{article?.description}}
+    </div>
+    <ng-container *ngFor="let post of article?.posts?.posts">
+        <app-post-details [post]="post"></app-post-details>
+    </ng-container>
+</div>
