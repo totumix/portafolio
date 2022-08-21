@@ -23,9 +23,12 @@ export class SliderComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    if(this.files.length == 1){
+      this.config.loop = false;
+    }
   }
 
   clickFile() {
-    console.log("Entra")
+    console.log("Entra" , this.files)
   }
 }
