@@ -5,13 +5,14 @@ import { RoutingPath } from 'src/app/configs/routing-path';
 import { ProjectsComponent } from './projects.component';
 import { ProjectDetailsComponent } from './pages/project-details/project-details.component';
 import { ProjectListComponent } from './components/project-list/project-list.component';
-import {IvyCarouselModule} from 'angular-responsive-carousel';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { ProjectsLayoutComponent } from './pages/projects-layout/projects-layout.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { PostsService } from 'src/app/configs/services/posts.service';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { CategoriesService } from 'src/app/configs/services/categories.service';
 import { ArticlesService } from 'src/app/configs/services/articles.service';
+import { ArticlesModule } from '../articles/articles.module';
 
 const routes: Routes = [
   {
@@ -46,9 +47,10 @@ const routes: Routes = [
     IvyCarouselModule,
     TranslateModule,
     SharedModule,
+    ArticlesModule,
     RouterModule.forChild(routes)
   ],
-  providers:[
+  providers: [
     PostsService,
     CategoriesService,
     ArticlesService
