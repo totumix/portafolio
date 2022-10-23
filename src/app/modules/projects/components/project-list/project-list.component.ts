@@ -14,7 +14,7 @@ export class ProjectListComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.vm.getArticlesWithCategory('Portafolio').subscribe(res => {
+    this.vm.getArticlesWithCategory('portafolio').subscribe(res => {
       let { total, articles } = res;
       this.articles = articles;
     })
