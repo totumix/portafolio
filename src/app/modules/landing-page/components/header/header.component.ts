@@ -37,4 +37,5 @@ export class HeaderComponent implements OnInit {
   changeLanguage(language: string) {
     this.translate.setDefaultLang(language)
   }
+
 }

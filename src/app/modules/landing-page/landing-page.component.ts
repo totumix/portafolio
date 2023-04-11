@@ -25,6 +25,7 @@ export class LandingPageComponent implements OnInit {
 
 
   ngOnInit(): void {
+    console.log("entra")
     this._constRoutes.actualRoute.subscribe(actualRoute => {
       this.hideHomeBreadCrumb = this.showBreadCrumb(actualRoute);
     })
