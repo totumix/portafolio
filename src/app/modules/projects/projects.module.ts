@@ -8,10 +8,7 @@ import { ProjectListComponent } from './components/project-list/project-list.com
 import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { ProjectsLayoutComponent } from './pages/projects-layout/projects-layout.component';
 import { TranslateModule } from '@ngx-translate/core';
-import { PostsService } from 'src/app/configs/services/posts.service';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { CategoriesService } from 'src/app/configs/services/categories.service';
-import { ArticlesService } from 'src/app/configs/services/articles.service';
 import { ArticlesModule } from '../articles/articles.module';
 
 const routes: Routes = [
@@ -50,11 +47,7 @@ const routes: Routes = [
     ArticlesModule,
     RouterModule.forChild(routes)
   ],
-  providers: [
-    PostsService,
-    CategoriesService,
-    ArticlesService
-  ],
+  providers: [ ],
   exports: [
     ProjectListComponent
   ]

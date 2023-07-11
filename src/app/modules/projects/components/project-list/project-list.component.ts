@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProjectListVm } from 'src/app/configs/vm/project-list.vm';
+import { articles } from 'src/app/core/bd/ativles';
 import { IArticle } from 'src/app/core/models/article.interface';
 @Component({
   selector: 'app-project-list',
@@ -8,15 +8,12 @@ import { IArticle } from 'src/app/core/models/article.interface';
 })
 export class ProjectListComponent implements OnInit {
 
-  public articles: IArticle[]
+  public articles = [];
   constructor(
-    private vm: ProjectListVm
   ) { }
 
   ngOnInit(): void {
-    this.vm.getArticlesWithCategory('portafolio').subscribe(res => {
-      let { total, articles } = res;
-      this.articles = articles;
-    })
+    this.articles = articles;
+    console.log(this.articles)
   }
 }

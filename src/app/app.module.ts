@@ -11,7 +11,6 @@ import { CommonModule } from '@angular/common';
 
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { BackendService } from './configs/backend.service';
 export function HttpLoaderFactory(http : HttpClient){
   return new TranslateHttpLoader(http , './assets/i18n/' , '.json')
 }
@@ -38,9 +37,7 @@ export function HttpLoaderFactory(http : HttpClient){
       isolate: true,
     })
   ],
-  providers: [
-    BackendService
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
