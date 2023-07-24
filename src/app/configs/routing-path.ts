@@ -20,17 +20,7 @@ export class RoutingPath {
           contact: {
             path: "contact",
             breadcrumb: "Contact",
-          },
-          projects: {
-            path: "projects",
-            breadcrumb: "Projects",
-            pages: {
-              project_details: {
-                path: "project-details/:projectId",
-                breadcrumb: "Details",
-              },
-            }
-          },
+          }
         }
       }
     }

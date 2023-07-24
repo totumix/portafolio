@@ -9,9 +9,9 @@ import { LandingPageComponent } from './landing-page.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SkillsListComponent } from './components/skills-list/skills-list.component';
-import { ProjectsModule } from '../projects/projects.module';
 import { TranslateModule } from '@ngx-translate/core';
 import { BreadcrumbModule } from 'src/app/shared/breadcrumb/breadcrumb.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,9 +27,9 @@ import { BreadcrumbModule } from 'src/app/shared/breadcrumb/breadcrumb.module';
   imports: [
     CommonModule,
     LandingPageRoutingModule,
-    ProjectsModule,
     TranslateModule,
-    BreadcrumbModule
+    BreadcrumbModule,
+    HttpClientModule,
   ]
 })
 export class LandingPageModule { }

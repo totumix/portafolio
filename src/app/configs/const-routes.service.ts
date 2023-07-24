@@ -13,8 +13,6 @@ export class ConstRoutesService {
   public landingSkillsUrl = RoutingPath.appRouting.components.landing_page.pages.skill.path;
   public landingExperiencesUrl = RoutingPath.appRouting.components.landing_page.pages.work_experience.path;
   public landingContactUrl = RoutingPath.appRouting.components.landing_page.pages.contact.path;
-  public landingProjectsUrl = RoutingPath.appRouting.components.landing_page.pages.projects.path;
-  public projectDetailsUrl = RoutingPath.appRouting.components.landing_page.pages.projects.pages.project_details.path.split('/', 1)[0];
   private route = new BehaviorSubject(this.router.url);
   actualRoute = this.route.asObservable();
 

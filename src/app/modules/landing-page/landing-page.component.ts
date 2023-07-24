@@ -33,7 +33,6 @@ export class LandingPageComponent implements OnInit {
       { label: "ABOUTME", url: `${this._constRoutes.landingModuleUrl}/${this._constRoutes.landingHomeUrl}`, hide: false },
       { label: "SKILLS", url: `${this._constRoutes.landingModuleUrl}/${this._constRoutes.landingSkillsUrl}`, hide: false },
       { label: "WORK EXPERIENCE", url: `${this._constRoutes.landingModuleUrl}/${this._constRoutes.landingExperiencesUrl}`, hide: false },
-      { label: "PROJECTS", url: `${this._constRoutes.landingModuleUrl}/${this._constRoutes.landingProjectsUrl}`, hide: true },
       { label: "CONTACT", url: `${this._constRoutes.landingModuleUrl}/${this._constRoutes.landingContactUrl}`, hide: false },
     ]
   }
